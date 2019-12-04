@@ -64,7 +64,7 @@ class Runner
     {
         $logger = $app->createLogger(new LoggerFactory($errorHandler));
         $errorHandler->initialize($logger);
-        $app->validateEnvironment(Dotenv::create($this->projectRoot));
+        $app->validateEnvironment(Dotenv::createImmutable($this->projectRoot));
         return $logger;
     }
 
