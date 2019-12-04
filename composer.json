@@ -1,5 +1,5 @@
 {
-  "name": "emartech/application",
+  "name": "emartech/php-webapp",
   "description": "core function to create web applications",
   "minimum-stability": "stable",
   "license": [
