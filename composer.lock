@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cb1b511581d9abc5349e0b67116e5930",
+    "content-hash": "9f0cfb5ee093d647992707c5b8fa1618",
     "packages": [
         {
             "name": "emartech/escher",

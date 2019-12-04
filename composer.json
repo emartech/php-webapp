@@ -25,10 +25,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Emartech\\Application\\": "src/Application/",
-      "Emartech\\AuthHandler\\": "src/AuthHandler/",
-      "Emartech\\Http\\": "src/Http/",
-      "Emartech\\StopWatch\\": "src/StopWatch/"
+      "Emartech\\": "src/"
     }
   },
   "autoload-dev": {
