@@ -1,0 +1,39 @@
+{
+  "name": "emartech/application",
+  "description": "core function to create web applications",
+  "minimum-stability": "stable",
+  "license": [
+    "MIT"
+  ],
+  "prefer-stable" : true,
+  "require": {
+    "php": "~7.3",
+    "psr/log": "*",
+    "psr/http-message": "*",
+    "emartech/escher" : "*",
+    "emartech/php-http-status": "*",
+    "guzzlehttp/guzzle": "*",
+    "monolog/monolog": "*",
+    "nikic/fast-route": "*",
+    "vlucas/phpdotenv": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "*",
+    "phpunit/php-invoker": "*",
+    "emartech/php-test-helpers": "*",
+    "fqqdk/packagist-publisher": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Emartech\\Application\\": "src/Application/",
+      "Emartech\\AuthHandler\\": "src/AuthHandler/",
+      "Emartech\\Http\\": "src/Http/",
+      "Emartech\\StopWatch\\": "src/StopWatch/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Test\\": "test/"
+    }
+  }
+}
