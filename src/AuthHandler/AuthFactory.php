@@ -1,9 +1,7 @@
 <?php
 
-namespace Participation;
+namespace Emartech\AuthHandler;
 
-use Emartech\AuthHandler\AuthHandlerInterface;
-use Emartech\AuthHandler\EscherAuth;
 use Escher\Escher;
 
 class AuthFactory
