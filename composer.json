@@ -14,8 +14,7 @@
     "emartech/php-http-status": "*",
     "guzzlehttp/guzzle": "*",
     "monolog/monolog": "*",
-    "nikic/fast-route": "*",
-    "vlucas/phpdotenv": "*"
+    "nikic/fast-route": "*"
   },
   "require-dev": {
     "phpunit/phpunit": "*",

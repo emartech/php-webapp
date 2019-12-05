@@ -2,43 +2,29 @@
 
 namespace Participation;
 
-use Dotenv\Dotenv;
-use Dotenv\Exception\ExceptionInterface;
-use Emartech\Application\EnvironmentValidator;
 use Emartech\AuthHandler\AuthHandlerInterface;
 use Emartech\AuthHandler\EscherAuth;
 use Escher\Escher;
 
-class AuthFactory implements EnvironmentValidator
+class AuthFactory
 {
-    private $env;
+    private $keyDb;
+    private $credentialScope;
 
-    public static function create(Environment $env): self
+    public function __construct(array $keyDb, string $credentialScope)
     {
-        return new self($env);
-    }
-
-    public function __construct(Environment $env)
-    {
-        $this->env = $env;
-    }
-
-    /**
-     * @throws ExceptionInterface
-     */
-    public function validateEnvironment(Dotenv $dotenv): void
-    {
-        $this->env->requireEscherConfigForAuthentication($dotenv);
+        $this->keyDb = $keyDb;
+        $this->credentialScope = $credentialScope;
     }
 
     public function createEscherAuth(): AuthHandlerInterface
     {
-        return new EscherAuth($this->createEscher(), $this->env->getEscherKeyDb());
+        return new EscherAuth($this->createEscher(), $this->keyDb);
     }
 
     public function createEscher(): Escher
     {
-        return Escher::create($this->env->getEscherCredentialScopeForAuthentication())
+        return Escher::create($this->credentialScope)
             ->setAlgoPrefix('EMS')
             ->setVendorKey('EMS')
             ->setAuthHeaderKey('X-Ems-Auth')

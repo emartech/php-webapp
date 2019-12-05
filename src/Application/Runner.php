@@ -2,7 +2,6 @@
 
 namespace Emartech\Application;
 
-use Dotenv\Dotenv;
 use Emartech\Http\Http;
 use Exception;
 use HttpStatus\Status;
@@ -24,13 +23,6 @@ class Runner
     private const ROUTE_INFO_RESULT = 0;
     private const ROUTE_INFO_REQUEST_HANDLER = 1;
     private const ROUTE_INFO_REQUEST_VARS = 2;
-
-    private $projectRoot;
-
-    public function __construct(string $projectRoot)
-    {
-        $this->projectRoot = $projectRoot;
-    }
 
     public function runWebApplication(WebApplication $app): void
     {
@@ -64,7 +56,7 @@ class Runner
     {
         $logger = $app->createLogger(new LoggerFactory($errorHandler));
         $errorHandler->initialize($logger);
-        $app->validateEnvironment(Dotenv::createImmutable($this->projectRoot));
+        $app->validateEnvironment();
         return $logger;
     }
 
