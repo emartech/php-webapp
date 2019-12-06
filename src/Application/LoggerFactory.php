@@ -47,8 +47,12 @@ class LoggerFactory
 
     private function createHandler(string $logLevel): HandlerInterface
     {
+        $formatter = $this->createFormatter();
+        $formatter->includeStacktraces();
+
         $streamHandler = new StreamHandler('php://stderr', Logger::getLevels()[$logLevel]);
-        $streamHandler->setFormatter($this->createFormatter()->includeStacktraces());
+        $streamHandler->setFormatter($formatter);
+
         return $streamHandler;
     }
 }
