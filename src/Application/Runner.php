@@ -31,6 +31,15 @@ class Runner
         $this->executeWebApplication($routeCollector, $logger);
     }
 
+    public function runWorkerForever(Worker $worker): void
+    {
+        $logger = $this->initializeApplication(ErrorHandler::createForScript(), $worker);
+
+        while (true) {
+            $worker->run($logger);
+        }
+    }
+
     private function configureWebApplication(WebApplication $app, $logger): RouteCollector
     {
         $routeCollector = new RouteCollector(new Std(), new GroupCountBasedDataGenerator());
@@ -41,15 +50,6 @@ class Runner
     private function executeWebApplication($routeCollector, $logger): void
     {
         $this->sendResponse(new Http(), $this->handleRequest(ServerRequest::fromGlobals(), $routeCollector, $logger));
-    }
-
-    public function runWorkerForever(Worker $worker): void
-    {
-        $logger = $this->initializeApplication(ErrorHandler::createForScript(), $worker);
-
-        while (true) {
-            $worker->run($logger);
-        }
     }
 
     private function initializeApplication(ErrorHandler $errorHandler, Application $app): LoggerInterface
