@@ -21,14 +21,14 @@ class Environment
         }
     }
 
-    public function getRawValue($variableName): string
+    public function getRawValue($variableName)
     {
         return getenv($variableName);
     }
 
     public function getJSON($variableName): array
     {
-        $result = json_decode($this->getRawValue($variableName), true);
+        $result = json_decode($this->getRawValue($variableName), true, 512, JSON_THROW_ON_ERROR);
 
         if($result === false) {
             throw new Exception('Environemt variable value is not a valid JSON: '.$variableName);
