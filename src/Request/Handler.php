@@ -6,6 +6,7 @@ use Emartech\AuthHandler\AuthHandlerInterface;
 use Emartech\AuthHandler\Exception as AuthHandlerException;
 use Exception;
 use GuzzleHttp\Psr7\Response;
+use HttpStatus\Status;
 use InvalidArgumentException;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -33,13 +34,13 @@ class Handler
             return call_user_func($this->handler, $request, $vars);
         } catch (AuthHandlerException $ex) {
             $this->logError($request, $vars, $ex);
-            return new Response(403, [], $ex->getCode() . ' ' . $ex->getMessage());
+            return new Response(Status::HTTP_FORBIDDEN, [], $ex->getCode() . ' ' . $ex->getMessage());
         } catch (InvalidArgumentException $ex) {
             $this->logError($request, $vars, $ex);
-            return new Response(400, [], $ex->getMessage());
+            return new Response(Status::HTTP_BAD_REQUEST, [], $ex->getMessage());
         } catch (Exception $ex) {
             $this->logError($request, $vars, $ex);
-            return new Response(500, [], $ex->getCode() . ' ' . $ex->getMessage());
+            return new Response(Status::HTTP_INTERNAL_SERVER_ERROR);
         }
     }
 
