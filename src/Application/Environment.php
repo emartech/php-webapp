@@ -6,6 +6,9 @@ use Exception;
 
 class Environment
 {
+    /**
+     * @throws Exception
+     */
     public function checkVariables(array $variables): void
     {
         $missing = [];
@@ -26,6 +29,9 @@ class Environment
         return getenv($variableName);
     }
 
+    /**
+     * @throws Exception
+     */
     public function getJSON($variableName): array
     {
         $result = json_decode($this->getRawValue($variableName), true, 512, JSON_THROW_ON_ERROR);
