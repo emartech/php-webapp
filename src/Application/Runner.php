@@ -40,6 +40,11 @@ class Runner
         }
     }
 
+    public function runWorker(Worker $worker): void
+    {
+        $worker->run($this->initializeApplication(ErrorHandler::createForScript(), $worker));
+    }
+
     private function configureWebApplication(WebApplication $app, $logger): RouteCollector
     {
         $routeCollector = new RouteCollector(new Std(), new GroupCountBasedDataGenerator());
