@@ -7,20 +7,20 @@
   ],
   "prefer-stable" : true,
   "require": {
-    "php": "~7.3",
-    "psr/log": "1.1.4",
-    "psr/http-message": "1.0.1",
-    "emartech/escher" : "1.2.1",
-    "emartech/php-http-status": "0.0.1",
-    "guzzlehttp/guzzle": "6.5.5",
-    "monolog/monolog": "2.2.0",
-    "nikic/fast-route": "v1.3.0"
+    "php": ">=7.3",
+    "psr/log": ">=1.1",
+    "psr/http-message": ">=1.0",
+    "emartech/escher" : ">=1.2",
+    "emartech/php-http-status": ">=0.0.1",
+    "guzzlehttp/guzzle": ">=6.5",
+    "monolog/monolog": ">=2.2",
+    "nikic/fast-route": ">=v1.3"
   },
   "require-dev": {
-    "phpunit/phpunit": "8.5.15",
-    "phpunit/php-invoker": "3.1.1",
-    "emartech/php-test-helpers": "1.1.1",
-    "fqqdk/packagist-publisher": "1.2.6"
+    "phpunit/phpunit": ">=8.5",
+    "phpunit/php-invoker": ">=3.1",
+    "emartech/php-test-helpers": ">=1.1",
+    "fqqdk/packagist-publisher": ">=1.2"
   },
   "autoload": {
     "psr-4": {

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fdb1f55b6821cdfeee1c4ca9511c317e",
+    "content-hash": "4441cb36c1a8276204b318dc52687da4",
     "packages": [
         {
             "name": "emartech/escher",
@@ -1067,25 +1067,25 @@
         },
         {
             "name": "fqqdk/packagist-publisher",
-            "version": "1.2.6",
+            "version": "1.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fqqdk/packagist-publisher.git",
-                "reference": "c9284bab013757fb22b0b175903cc8c16fe14db6"
+                "reference": "e829ff003f8faf73b42de8d80be17ff34cd94280"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fqqdk/packagist-publisher/zipball/c9284bab013757fb22b0b175903cc8c16fe14db6",
-                "reference": "c9284bab013757fb22b0b175903cc8c16fe14db6",
+                "url": "https://api.github.com/repos/fqqdk/packagist-publisher/zipball/e829ff003f8faf73b42de8d80be17ff34cd94280",
+                "reference": "e829ff003f8faf73b42de8d80be17ff34cd94280",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "2.0",
+                "composer-plugin-api": ">=1.1",
                 "guzzlehttp/guzzle": "6.*",
                 "php": ">=5.3.0"
             },
             "require-dev": {
-                "composer/composer": ">=2.0"
+                "composer/composer": ">=1.8"
             },
             "type": "composer-plugin",
             "extra": {
@@ -1103,9 +1103,9 @@
             "description": "A handy composer script to be used to publish your package to packagist",
             "support": {
                 "issues": "https://github.com/fqqdk/packagist-publisher/issues",
-                "source": "https://github.com/fqqdk/packagist-publisher/tree/1.2.6"
+                "source": "https://github.com/fqqdk/packagist-publisher/tree/1.2.7"
             },
-            "time": "2021-05-18T09:45:24+00:00"
+            "time": "2021-05-18T11:41:21+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -2881,7 +2881,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "~7.3"
+        "php": ">=7.3"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"
