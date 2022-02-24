@@ -22,6 +22,11 @@
     "emartech/php-test-helpers": ">=1.1",
     "fqqdk/packagist-publisher": ">=1.2"
   },
+  "config": {
+    "allow-plugins": {
+      "fqqdk/packagist-publisher": true
+    }
+  },
   "autoload": {
     "psr-4": {
       "Emartech\\": "src/"
