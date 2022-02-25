@@ -2,7 +2,7 @@ version: '3'
 
 services:
   php-webapp:
-    image: composer:1.9.3
+    image: composer
     working_dir: /app
     volumes:
       - .:/app:rw
