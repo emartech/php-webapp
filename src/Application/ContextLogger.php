@@ -29,7 +29,7 @@ class ContextLogger extends AbstractLogger
     /**
      * @throws InvalidArgumentException
      */
-    public function log($level, $message, array $context = array())
+    public function log($level, $message, array $context = array()): void
     {
         $this->delegate->log($level, $message, $this->context + $context);
     }
