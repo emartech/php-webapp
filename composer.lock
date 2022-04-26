@@ -1120,16 +1120,16 @@
         },
         {
             "name": "fqqdk/packagist-publisher",
-            "version": "1.2.8",
+            "version": "1.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fqqdk/packagist-publisher.git",
-                "reference": "c9e109141af21fe1186da3c79d735be68131d407"
+                "reference": "b1ea19fdc25090ec7f90c03a5be4dfd9fcf8eb95"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fqqdk/packagist-publisher/zipball/c9e109141af21fe1186da3c79d735be68131d407",
-                "reference": "c9e109141af21fe1186da3c79d735be68131d407",
+                "url": "https://api.github.com/repos/fqqdk/packagist-publisher/zipball/b1ea19fdc25090ec7f90c03a5be4dfd9fcf8eb95",
+                "reference": "b1ea19fdc25090ec7f90c03a5be4dfd9fcf8eb95",
                 "shasum": ""
             },
             "require": {
@@ -1156,9 +1156,9 @@
             "description": "A handy composer script to be used to publish your package to packagist",
             "support": {
                 "issues": "https://github.com/fqqdk/packagist-publisher/issues",
-                "source": "https://github.com/fqqdk/packagist-publisher/tree/1.2.8"
+                "source": "https://github.com/fqqdk/packagist-publisher/tree/1.2.9"
             },
-            "time": "2022-04-26T14:50:05+00:00"
+            "time": "2022-04-26T15:03:30+00:00"
         },
         {
             "name": "myclabs/deep-copy",
