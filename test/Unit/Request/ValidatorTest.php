@@ -1,6 +1,6 @@
 <?php
 
-namespace Test\Unit;
+namespace Test\Unit\Request;
 
 use Emartech\Request\Validator;
 use GuzzleHttp\Psr7\ServerRequest;

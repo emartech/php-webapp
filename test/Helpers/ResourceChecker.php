@@ -6,11 +6,9 @@ class ResourceChecker
 {
     private const MAX_TRIES = 60;
 
-    private $checkers;
+    /** @var CheckerInterface[] */
+    private array $checkers;
 
-    /**
-     * @param CheckerInterface[] $checkers
-     */
     public function __construct(array $checkers)
     {
         $this->checkers = $checkers;

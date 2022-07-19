@@ -15,12 +15,8 @@ class EscherAuthTest extends TestCase
     /**
      * @var Escher|MockObject
      */
-    private $escher;
-
-    /**
-     * @var EscherAuth
-     */
-    private $authHandler;
+    private mixed $escher;
+    private EscherAuth $authHandler;
 
     protected function setUp(): void
     {
