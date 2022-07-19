@@ -3,11 +3,11 @@
 namespace Test\Unit;
 
 use Emartech\Request\Validator;
-use Emartech\TestHelper\BaseTestCase;
 use GuzzleHttp\Psr7\ServerRequest;
 use InvalidArgumentException;
+use PHPUnit\Framework\TestCase;
 
-class ValidatorTest extends BaseTestCase
+class ValidatorTest extends TestCase
 {
     /**
      * @test

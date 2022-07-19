@@ -4,13 +4,13 @@ namespace Test\Unit\AuthHandler;
 
 use Emartech\AuthHandler\EscherAuth;
 use Emartech\AuthHandler\Exception as AuthHandlerException;
-use Emartech\TestHelper\BaseTestCase;
 use Escher\Exception as EscherException;
 use Escher\Escher;
 use PHPUnit\Framework\MockObject\Builder\InvocationMocker;
 use PHPUnit\Framework\MockObject\MockObject;
+use PHPUnit\Framework\TestCase;
 
-class EscherAuthTest extends BaseTestCase
+class EscherAuthTest extends TestCase
 {
     /**
      * @var Escher|MockObject
